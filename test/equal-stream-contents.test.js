@@ -7,7 +7,7 @@ describe('Testing equalStreamContents', function() {
   it(`equalStreamContents returns a promise that resolves on equality`,
     function() {
       return equalStreamContents(gulp.src('gulp/**/*.js'),
-        gulp.src('gulp/**/*.js'));
+        gulp.src('gulp/*.js'));
     });
 
   it(`equalStreamContents returns a promise that rejects on inequality`,
