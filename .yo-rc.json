@@ -1,0 +1,13 @@
+{
+  "generator-wupjs": {
+    "module": "equal-stream-contents",
+    "description": "Compare two streams on the fly (no writing on disc)",
+    "author": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com",
+    "github": "jlenoble",
+    "license": "MIT",
+    "transpile": "es2015",
+    "addons": [],
+    "Class": "EqualStreamContents"
+  }
+}
