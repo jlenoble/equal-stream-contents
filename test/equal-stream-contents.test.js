@@ -19,3 +19,21 @@ describe('Testing equalStreamContents', function() {
     });
 
 });
+
+describe('Testing equalStreamContents withmore than 16 files', function() {
+
+  it(`equalStreamContents returns a promise that resolves on equality`,
+    function() {
+      return equalStreamContents(gulp.src('test/files/*'),
+        gulp.src('test/files/*'));
+    });
+
+  it(`equalStreamContents returns a promise that rejects on inequality`,
+    function() {
+      return equalStreamContents(gulp.src('test/files/*'),
+        gulp.src(['test/files/*', '!test/files/z'])).catch(err => {
+          expect(err.toString()).to.match(/AssertionError: expected \{ Object.* to deeply equal \{ Object/);
+        });
+    });
+
+});
