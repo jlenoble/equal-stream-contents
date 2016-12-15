@@ -20,7 +20,7 @@ describe('Testing equalStreamContents', function() {
 
 });
 
-describe('Testing equalStreamContents withmore than 16 files', function() {
+describe('Testing equalStreamContents with more than 16 files', function() {
 
   it(`equalStreamContents returns a promise that resolves on equality`,
     function() {
