@@ -3,18 +3,17 @@ import {expect} from 'chai';
 import equalStreamContents from '../src/equal-stream-contents';
 import {tmpDir} from 'cleanup-wrapper';
 import touch from 'touch';
-import mkdirp from 'mkdirp'
+import mkdirp from 'mkdirp';
 
-describe('Testing equalStreamContents', function() {
-
+describe('Testing equalStreamContents', function () {
   it(`equalStreamContents returns a promise that resolves on equality`,
-    function() {
+    function () {
       return equalStreamContents(gulp.src('gulp/**/*.js'),
         gulp.src('gulp/*.js'));
     });
 
   it(`equalStreamContents returns a promise that rejects on inequality`,
-    function() {
+    function () {
       return equalStreamContents(gulp.src('gulp/**/*.js'),
         gulp.src(['gulp/**/*.js', '!gulp/globs.js'])).catch(err => {
           try {
@@ -24,13 +23,11 @@ describe('Testing equalStreamContents', function() {
           }
         });
     });
-
 });
 
-describe('Testing equalStreamContents with more than 16 files', function() {
-
+describe('Testing equalStreamContents with more than 16 files', function () {
   it(`equalStreamContents returns a promise that resolves on equality`,
-    tmpDir('tmp', function() {
+    tmpDir('tmp', function () {
       mkdirp.sync('tmp');
       for (let i = 0; i < 20; i++) {
         touch.sync('tmp/a' + i);
@@ -39,7 +36,7 @@ describe('Testing equalStreamContents with more than 16 files', function() {
     }));
 
   it(`equalStreamContents returns a promise that rejects on inequality`,
-    tmpDir('tmp', function() {
+    tmpDir('tmp', function () {
       mkdirp.sync('tmp');
       for (let i = 0; i < 20; i++) {
         touch.sync('tmp/a' + i);
@@ -53,5 +50,4 @@ describe('Testing equalStreamContents with more than 16 files', function() {
           }
         });
     }));
-
 });

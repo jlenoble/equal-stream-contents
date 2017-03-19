@@ -2,7 +2,7 @@
   "name": "equal-stream-contents",
   "version": "0.1.2",
   "description": "Compare two streams on the fly (no writing on disc)",
-  "main": "index.js",
+  "main": "lib/equal-stream-contents.js",
   "scripts": {
     "test": "gulp test"
   },
@@ -30,8 +30,10 @@
     "babel-preset-es2015": "^6.9.0",
     "cleanup-wrapper": "^0.2.1",
     "del": "^2.2.1",
+    "eslint-config-google": "^0.7.1",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
     "gulp-jscs": "^4.0.0",
     "gulp-mocha": "^2.2.0",
     "gulp-plumber": "^1.1.0",
