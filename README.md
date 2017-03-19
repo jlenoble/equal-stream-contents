@@ -27,4 +27,4 @@ equalStreamContents(stream1, stream2).then(() => {
 
 equal-stream-contents is [MIT licensed](./LICENSE).
 
-© 2016 [Jason Lenoble](mailto:jason.lenoble@gmail.com)
+© 2016-2017 [Jason Lenoble](mailto:jason.lenoble@gmail.com)
