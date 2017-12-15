@@ -16,12 +16,12 @@ describe('Testing equalStreamContents', function () {
     function () {
       return equalStreamContents(gulp.src('gulp/**/*.js'),
         gulp.src(['gulp/**/*.js', '!gulp/globs.js'])).catch(err => {
-          try {
-            expect(err.toString()).to.match(/AssertionError: expected \{ Object.* to deeply equal \{ Object/);
-          } catch (e) {
-            throw err;
-          }
-        });
+        try {
+          expect(err.toString()).to.match(/AssertionError: expected \{ Object.* to deeply equal \{ Object/);
+        } catch (e) {
+          throw err;
+        }
+      });
     });
 });
 
@@ -43,11 +43,11 @@ describe('Testing equalStreamContents with more than 16 files', function () {
       }
       return equalStreamContents(gulp.src('tmp/*'),
         gulp.src(['tmp/*', '!tmp/a0'])).catch(err => {
-          try {
-            expect(err.toString()).to.match(/AssertionError: expected \{ Object.* to deeply equal \{ Object/);
-          } catch (e) {
-            throw err;
-          }
-        });
+        try {
+          expect(err.toString()).to.match(/AssertionError: expected \{ Object.* to deeply equal \{ Object/);
+        } catch (e) {
+          throw err;
+        }
+      });
     }));
 });
