@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "chai": "^4.1.2",
+    "explanation": "^0.1.1",
     "gulp-cached": "^1.1.0",
     "stream-to-promise": "^2.2.0"
   }

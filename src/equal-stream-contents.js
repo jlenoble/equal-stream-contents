@@ -1,6 +1,7 @@
 import streamToPromise from 'stream-to-promise';
 import cached from 'gulp-cached';
 import {expect} from 'chai';
+import {error} from 'explanation';
 
 let counter = 0;
 
